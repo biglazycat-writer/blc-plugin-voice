@@ -1,0 +1,19 @@
+# 依赖与工具缓存
+node_modules/
+.vite/
+coverage/
+*.log
+npm-debug.log*
+
+# 构建产物（由 npm run build 生成，不提交）
+dist/
+# 插件包（由 npm run package 生成，不提交）
+dist-package/
+
+# 本机环境与编辑器
+.env
+.env.*
+.DS_Store
+.idea/
+.vscode/
+*.local

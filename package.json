@@ -1,0 +1,96 @@
+{
+  "name": "blc-plugin-template",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "大懒猫创作平台插件模板工程",
+  "engines": {
+    "node": ">=22.23.3 <23.0.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.node.json --noEmit",
+    "build": "tsc -p tsconfig.node.json && vite build",
+    "test": "node --test tests/*.test.mjs",
+    "package": "node scripts/package.mjs"
+  },
+  "dependencies": {
+    "blc-plugin-sdk": "1.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.19.0",
+    "typescript": "5.9.3",
+    "vite": "7.3.8"
+  },
+  "files": [
+    "dist",
+    "package-lock.json",
+    "README.md",
+    "README.en.md"
+  ],
+  "biglazycat": {
+    "apiVersion": 1,
+    "displayName": "插件模板 · Hello World",
+    "description": "最小可运行示例：后台命令、浏览器视图、状态保存与测试。基于此模板开始开发你的插件。",
+    "main": "dist/main.js",
+    "mainView": "main",
+    "platforms": [
+      "windows/amd64",
+      "windows/arm64",
+      "darwin/amd64",
+      "darwin/arm64",
+      "linux/amd64",
+      "linux/arm64"
+    ],
+    "contributes": {
+      "commands": [
+        {
+          "id": "template.hello",
+          "title": "打招呼",
+          "description": "返回一条问候消息，演示命令参数、进度与取消。",
+          "aiCallable": true,
+          "externalEffect": false,
+          "inputSchema": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "要问候的对象"
+              }
+            }
+          }
+        },
+        {
+          "id": "template.status",
+          "title": "查看插件状态",
+          "aiCallable": true,
+          "externalEffect": false
+        },
+        {
+          "id": "template.open",
+          "title": "打开模板页面",
+          "aiCallable": true,
+          "externalEffect": false
+        }
+      ],
+      "menus": [
+        {
+          "location": "editor.document",
+          "command": "template.open"
+        },
+        {
+          "location": "toolbar",
+          "command": "template.open"
+        }
+      ],
+      "views": [
+        {
+          "id": "main",
+          "title": "插件模板",
+          "entry": "dist/ui/index.html",
+          "defaultLocation": "tab",
+          "route": "/main"
+        }
+      ]
+    }
+  }
+}
