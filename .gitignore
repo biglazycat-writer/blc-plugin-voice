@@ -17,3 +17,6 @@ dist-package/
 .idea/
 .vscode/
 *.local
+
+# 本地构建缓存
+.cache/
