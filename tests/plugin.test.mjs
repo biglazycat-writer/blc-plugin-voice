@@ -352,8 +352,11 @@ test('清单入口、视图、菜单与服务引用自洽', async () => {
   assert.equal(spec.main, 'dist/main.js');
   assert.equal(spec.mainView, spec.contributes.views[0].id);
   assert.equal(spec.contributes.views[0].entry, 'dist/ui/index.html');
-  for (const menu of spec.contributes.menus) {
-    assert.ok(spec.contributes.commands.some(command => command.id === menu.command));
+  for (const feature of spec.contributes.features) {
+    for (const action of Object.values(feature.actions)) {
+      if (action.command) assert.ok(spec.contributes.commands.some(command => command.id === action.command));
+      if (action.view) assert.ok(spec.contributes.views.some(view => view.id === action.view));
+    }
   }
   const serviceIds = new Set(spec.contributes.services.map(service => service.id));
   assert.ok(serviceIds.has('tts'));

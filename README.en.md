@@ -54,3 +54,7 @@ Generation failures are shown to the user. Turn off platform AI generation to ex
 
 See [repository conventions](AGENTS.md), [provider tests](tests/provider.test.mjs) and [article tests](tests/articles.test.mjs).
 System voice availability depends on the OS. Local model downloads need network access and support mirrors; engine details are in the [changelog](CHANGELOG.md).
+
+## Choosing feature locations
+
+Open plugin details in BigLazyCat Creator to choose where each declared feature appears. This plugin defines its features and supported locations in `contributes.features`; users choose among those locations. See the SDK [feature reference](https://github.com/biglazycat-writer/blc-plugin-sdk/blob/main/FEATURES.md) for the declaration format.

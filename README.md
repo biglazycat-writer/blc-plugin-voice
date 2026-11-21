@@ -54,3 +54,7 @@ AI 脚本生成通过 SDK 的 `ctx.ai.generate()` 调用平台默认文本模型
 
 开发约定见 [AGENTS.md](AGENTS.md)，验证见 [提供者测试](tests/provider.test.mjs) 与 [文章测试](tests/articles.test.mjs)。
 可用的系统音色取决于操作系统；本地模型下载需要网络并可配置镜像。引擎说明见 [CHANGELOG](CHANGELOG.md)。
+
+## 配置使用入口
+
+在大懒猫创作平台的插件详情中，为插件声明的功能选择使用入口。功能数量、支持的位置与对应动作由本插件的 `contributes.features` 决定；用户可以多选、取消或恢复默认。开发声明见 SDK 的 [功能入口协议](https://github.com/biglazycat-writer/blc-plugin-sdk/blob/main/FEATURES.md)。
