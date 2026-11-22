@@ -1,6 +1,6 @@
 {
   "name": "blc-plugin-voice",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "private": true,
   "type": "module",
   "description": "大懒猫写作本地语音插件：本地引擎朗读文章、多音色切换、文章一键转播客",
