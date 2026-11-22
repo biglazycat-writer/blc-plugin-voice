@@ -1,4 +1,4 @@
-# Voice Workshop for BigLazyCat Creator
+# Voice Workshop for BigLazyCat Writer
 
 This plugin reads articles aloud from the desktop toolbar and turns workspace articles into podcasts in its own view.
 
@@ -57,4 +57,4 @@ System voice availability depends on the OS. Local model downloads need network 
 
 ## Choosing feature locations
 
-Open plugin details in BigLazyCat Creator to choose where each declared feature appears. This plugin defines its features and supported locations in `contributes.features`; users choose among those locations. See the SDK [feature reference](https://github.com/biglazycat-writer/blc-plugin-sdk/blob/main/FEATURES.md) for the declaration format.
+Open plugin details in BigLazyCat Writer to choose where each declared feature appears. This plugin defines its features and supported locations in `contributes.features`; users choose among those locations. See the SDK [feature reference](https://github.com/biglazycat-writer/blc-plugin-sdk/blob/main/FEATURES.md) for the declaration format.

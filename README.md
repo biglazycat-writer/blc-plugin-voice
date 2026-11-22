@@ -1,6 +1,6 @@
-# 语音工坊 · 大懒猫创作平台插件
+# 语音工坊 · 大懒猫写作插件
 
-为大懒猫创作平台提供文章朗读能力，并在插件页面将工作区文章制作成播客。
+为大懒猫写作提供文章朗读能力，并在插件页面将工作区文章制作成播客。
 
 **简体中文** | [English](README.en.md)
 
@@ -57,4 +57,4 @@ AI 脚本生成通过 SDK 的 `ctx.ai.generate()` 调用平台默认文本模型
 
 ## 配置使用入口
 
-在大懒猫创作平台的插件详情中，为插件声明的功能选择使用入口。功能数量、支持的位置与对应动作由本插件的 `contributes.features` 决定；用户可以多选、取消或恢复默认。开发声明见 SDK 的 [功能入口协议](https://github.com/biglazycat-writer/blc-plugin-sdk/blob/main/FEATURES.md)。
+在大懒猫写作的插件详情中，为插件声明的功能选择使用入口。功能数量、支持的位置与对应动作由本插件的 `contributes.features` 决定；用户可以多选、取消或恢复默认。开发声明见 SDK 的 [功能入口协议](https://github.com/biglazycat-writer/blc-plugin-sdk/blob/main/FEATURES.md)。

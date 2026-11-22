@@ -24,7 +24,7 @@ interface TrackedSignal {
   abort(): void;
 }
 
-const SAMPLE_TEXT = '你好，我是大懒猫创作平台的本地语音。这句话用来试听当前音色的效果。';
+const SAMPLE_TEXT = '你好，我是大懒猫写作的本地语音。这句话用来试听当前音色的效果。';
 
 export default definePlugin(ctx => {
   const models = new ModelStore(ctx.dataDir);
